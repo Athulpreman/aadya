@@ -1,0 +1,49 @@
+<LinearLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <ImageButton
+        android:id="@+id/aad"
+        android:layout_width="182dp"
+        android:layout_height="47dp"
+        android:layout_marginBottom="60dp"
+        android:background="@drawable/aadya" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Username"
+        android:id="@+id/use"
+        android:layout_margin="20dp"
+        android:textSize="20dp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:id="@+id/pas"
+        android:layout_margin="20dp"
+        android:textSize="20dp"
+        android:inputType="textPassword"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Mobile"
+        android:id="@+id/mobile"
+        android:layout_margin="20dp"
+        android:textSize="20dp"
+        android:inputType="number"/>
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:text="Sign In"
+        android:id="@+id/signin"
+        android:textSize="20dp"
+        android:background="#F74E87"
+        android:textColor="#FFFFFF"/>
+
+
+
+    
+</LinearLayout>

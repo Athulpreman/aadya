@@ -1,0 +1,56 @@
+<LinearLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="     Edit Profile"
+        android:id="@+id/edit"
+        android:textSize="20dp"
+        android:drawableLeft="@drawable/editprofile"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="     My Favourite"
+        android:id="@+id/favourite"
+        android:textSize="20dp"
+        android:layout_marginRight="20dp"
+        android:drawableLeft="@drawable/star"
+        android:layout_marginLeft="20dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="     My Order"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="40dp"
+        android:id="@+id/cart"
+        android:textSize="20dp"
+        android:drawableLeft="@drawable/order"
+        android:layout_marginLeft="20dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="     Feedback"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="40dp"
+        android:id="@+id/feedback"
+        android:textSize="20dp"
+        android:drawableLeft="@drawable/feedback"
+        android:layout_marginLeft="20dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="     Logout"
+        android:id="@+id/logout"
+        android:layout_marginRight="20dp"
+        android:textSize="20dp"
+        android:drawableLeft="@drawable/logout"
+        android:layout_marginLeft="20dp"/>
+</LinearLayout>
