@@ -2,7 +2,7 @@ package com.example.aadya;
 
 public class User
 {
-    String username,password,mobile;
+    public String username,password,mobile;
 
     public User() {
     }

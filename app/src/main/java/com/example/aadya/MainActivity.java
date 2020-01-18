@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -28,10 +29,15 @@ public class MainActivity extends AppCompatActivity {
     String suser,spass;
     DatabaseReference refe;
 
+    User ob;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+
 
         user=(EditText)findViewById(R.id.username);
         pass=(EditText)findViewById(R.id.password);
@@ -52,26 +58,30 @@ public class MainActivity extends AppCompatActivity {
                 suser=user.getText().toString();
                 spass=pass.getText().toString();
 
-                Query query=refe.orderByChild("username").equalTo("suser");
+                Query query=refe.orderByChild("username").equalTo(suser);
                 query.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
                         for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren())
                         {
-                            User ob=dataSnapshot1.getValue(User.class);
+
+
+                            ob=dataSnapshot1.getValue(User.class);
                             String pass=ob.password;
 
                             if(pass.equals(spass))
                             {
-                                Intent intu=new Intent(getApplicationContext(),userloggedin.class);
-                                startActivity(intu);
 
                                 Toast.makeText(getApplicationContext(), "successful", Toast.LENGTH_SHORT).show();
+
+                                Intent intu=new Intent(getApplicationContext(),userloggedin.class);
+                                intu.putExtra("username",suser);
+                                startActivity(intu);
                             }
                             else
                             {
-                                Toast.makeText(getApplicationContext(), "successful", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getApplicationContext(), "incorrect pass or username", Toast.LENGTH_SHORT).show();
                             }
                         }
                     }
