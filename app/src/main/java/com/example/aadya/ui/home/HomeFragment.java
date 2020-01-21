@@ -66,8 +66,6 @@ public class HomeFragment extends Fragment {
                                 {
                                     User us=datasnap.getValue(User.class);
 
-
-
                                     s1=us.username;
                                     s2=us.mobile;
                                     s3=us.password;
@@ -76,11 +74,11 @@ public class HomeFragment extends Fragment {
                                     mobile.setText(s2);
                                     password.setText(s3);
                                 }
-
                             }
 
                             @Override
-                            public void onCancelled(@NonNull DatabaseError databaseError) {
+                            public void onCancelled(@NonNull DatabaseError databaseError)
+                            {
 
                             }
                         });
